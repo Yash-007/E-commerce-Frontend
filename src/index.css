@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .sidebar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .items::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .items {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.table-pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.table-pagination button{
+padding: 5px 12px;
+background-color: rgb(63, 63, 255);
+border-radius: 5px;
+color: white;
+font-size: small;
+}
+
+.table-pagination button[disabled]{
+  background-color: rgb(63, 63, 255);
+  opacity: 0.6;
+}
+
+.table-pagination span{
+  margin: 0 12px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+}
