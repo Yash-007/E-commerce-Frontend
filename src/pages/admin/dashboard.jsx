@@ -84,7 +84,7 @@ if(error){
        <WidgetItem
           percent={stats?.percentageChange?.revenue}
           amount={true}
-          value={stats?.count?.revenue}
+          value={(stats?.count?.revenue > 10000)? "10000+" : stats?.count?.revenue}
           heading={"Revenue"}
           color='rgb(0,115,255)'
         />

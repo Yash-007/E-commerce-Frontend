@@ -41,9 +41,9 @@ function Orders() {
           if(orders.length > 0){
             setRows(
               orders.map((order) => ({
-                amount: order?.total,
-                discount: order?.discount,
-                quantity: order?.orderItems?.length,
+                amount: `₹${order?.total}`,
+                discount: `₹${order?.discount}`,
+                quantity: order?.orderItems?.length,  
                 status: <span className={(order?.status === 'Processing') ? 'text-[red]' : (order?.status === 'Shipped') ? 'text-[green]' : 'text-[blue]'}>{order?.status}</span>,
               }))
             )
