@@ -84,7 +84,7 @@ if(error){
        <WidgetItem
           percent={stats?.percentageChange?.revenue}
           amount={true}
-          value={(stats?.count?.revenue > 10000)? "10000+" : stats?.count?.revenue}
+          value={stats?.count?.revenue}
           heading={"Revenue"}
           color='rgb(0,115,255)'
         />
@@ -198,7 +198,7 @@ const WidgetItem = ({
       </div>
 
 <div className='w-[80px]'>
-  <CircularProgressbar value={Math.abs(percent)} text={`${percent}%`} 
+  <CircularProgressbar value={Math.abs(percent)} text={ (percent > 1000)?`1000+%` : `${percent}%`} 
   styles={buildStyles({
     pathColor: `${color}`,
     textColor: `${color}`,
