@@ -22,7 +22,6 @@ function Login() {
       email: user.email,
       photo: user.photoURL,
       gender,
-      role: "user",
       dob: date,
       _id: user.uid,
      });

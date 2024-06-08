@@ -36,7 +36,6 @@ function TransactionManagement() {
   const {
     shippingInfo: { address, city, state, country, pinCode },
     orderItems,
-    customer,
     status,
     tax,
     subtotal,
@@ -44,6 +43,7 @@ function TransactionManagement() {
     discount,
     shippingCharges,
   } = data?.order || defaultData;
+  const customer = data?.order?.user || defaultData.customer;
 
   useEffect(() => {
     const GetSingleOrder = async () => {
